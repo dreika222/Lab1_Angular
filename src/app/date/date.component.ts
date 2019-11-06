@@ -8,17 +8,17 @@ import { Component, OnInit } from '@angular/core';
 export class DateComponent implements OnInit {
   date: string = new Date().toDateString();
   time: string;
-  user:string;
-  visibility: boolean = true;
+  user: string;
+  visibility = true;
 
   show() {
-    this.visibility = !this.visibility
+    this.visibility = !this.visibility;
   }
 
-  constructor() { 
-    setInterval(()=>{
-      this.time = new Date().toTimeString()
-    }, 1000)
+  constructor() {
+    setInterval(() => {
+      this.time = new Date().toTimeString();
+    }, 1000);
   }
 
   ngOnInit() {

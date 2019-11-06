@@ -1,13 +1,18 @@
 
-<h1>Hello, {{user}}</h1>
+<ng-content></ng-content>
 
 <div [ngClass] = "{invisible: visibility}">
         <h5>Today is...</h5>
-        <h5>Date: {{date}}</h5>
-        <h5>Time: {{time}}</h5>
+        <h5>Date: {{date | date: 'yyyy, MMM, dd'}}</h5>
+        <h5>Time: {{time | cutString: 9}}</h5>
 </div>
 
-<button *ngIf="visibility; else unvisible" (click)='show()'>Скрыть</button>
+<ng-container *ngTemplateOutlet="buttonTmpl"></ng-container>
+
+<ng-template #buttonTmpl>
+        <button *ngIf="visibility; else unvisible" (click)='show()'>Скрыть</button>
+</ng-template>
+
 <ng-template #unvisible>
         <button  (click) = 'show()'>Показать</button>
 </ng-template>

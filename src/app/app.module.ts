@@ -8,6 +8,8 @@ import { NewComponentComponent } from './new-component/new-component.component';
 import { DateComponent } from './date/date.component';
 import { CityComponent } from './city/city.component';
 import { AddCityComponent } from './add-city/add-city.component';
+import { CutStringPipe } from './pipes/cut-string.pipe';
+
 
 @NgModule({
   declarations: [
@@ -15,7 +17,8 @@ import { AddCityComponent } from './add-city/add-city.component';
     NewComponentComponent,
     DateComponent,
     CityComponent,
-    AddCityComponent
+    AddCityComponent,
+    CutStringPipe
   ],
   imports: [
     BrowserModule,

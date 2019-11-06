@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./city.component.scss']
 })
 export class CityComponent implements OnInit {
-  cities = ['Paris', 'London', 'Odessa', 'Tokyo', 'New York']
+  cities = ['Paris', 'London', 'Odessa', 'Tokyo', 'New York'];
   constructor() { }
 
   ngOnInit() {
